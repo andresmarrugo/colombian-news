@@ -1,33 +1,105 @@
+@import url(https://weloveiconfonts.com/api/?family=zocial|entypo);
+
 .App {
   text-align: center;
+  background-color: rgb(10, 77, 165);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+[class*="entypo-"]:before {
+  font-family: 'entypò', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
+.header{
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  height: 150px;
+  filter: drop-shadow(0px 6px 10px rgba(79, 22, 170, .7));
+}
+
+.title{
+  font-family: 'Roboto', 'Arial Narrow';
+  padding-left: 5%;
+  color: whitesmoke;
+  font-size: 20pt;
+  text-shadow: -2px 3px 5px white;
+}
+#info{
+  font-family: 'Courier New', Courier, monospace
+}
+.search{
+  align-self: flex-end;
+}
+
+.App form {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  
+  padding: 5% 10% 5% 0%;
+}
+
+.group{
+  display: flex;
+  align-items: center;
+}
+.group input, button{
+  height: 30px;
+  padding: 0px;
+  border: 0px none;
+}
+.group input{
+  
+}
+
+.group button{
+  width: 30px;
+  filter:saturate(0%);
+}
+
+.group button:hover{
+  background-color: rgb(179, 179, 179);
+}
+footer a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+footer a:hover {
+  color: gray;
+}
+footer{
+  display: flex;
+  height: 100px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 20pt;
+  margin-top: 5px;
+  background-color: black;
+  
+  
+}
+footer span{
+  margin: 0% 10%;
 }
 
-.App-link {
-  color: #61dafb;
-}
+@media only screen and (max-width: 600px) {
+  #info{
+      margin-top: 0px;
+      font-size: 14pt;
+      padding-top: 200px;
+      color: antiquewhite;
+  }
+  .header{
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+    padding-top: 0;
+    flex-direction: column;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

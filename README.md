@@ -1,3 +1,7 @@
+Sitiio noticias creado con react, aplicando hooks, fuctional componets y axios
+
+..................................................................................
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
