@@ -5,7 +5,7 @@ const createHash = require('hash-generator');
 const axios = require('axios')
 
 function App() {
-  const [url, setUrl] = useState(`https://newsapi.org/v2/top-headlines?country=co&apiKey=${process.env.API_KEY}`)
+  const [url, setUrl] = useState(`https://newsapi.org/v2/top-headlines?country=co&apiKey=6d2f58f1e8e04a7290b143496c77f016`)
   const [data, setData]=useState([])
   const [query, setQuery]=useState('Last News')
   console.log(process.env.API_KEY)
@@ -47,7 +47,7 @@ function App() {
       
       today = yyyy + '-' + mm + '-' + dd; // fecha pal' query
       
-      let urlQuery = `https://newsapi.org/v2/everything?q=${query}&from=${today}&sortBy=popularity&apiKey=${process.env.API_KEY}`
+      let urlQuery = `https://newsapi.org/v2/everything?q=${query}&from=${today}&sortBy=popularity&apiKey=6d2f58f1e8e04a7290b143496c77f016`
       document.querySelector('#info').innerHTML=`results for: <i>"${query}"</i>`
       document.querySelector('#searchBar').value=''
       setUrl(urlQuery)

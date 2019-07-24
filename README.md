@@ -1,4 +1,11 @@
-Sitiio noticias creado con react, aplicando hooks, fuctional componets y axios
+Sitio noticias creado con react, aplicando hooks, fuctional componets y axios
+
+El proposito de este codigo es estender la implementacion de hooks (useState, usseEffect) en react, las consultas se realizan a la api https://newsapi.org
+
+
+aqui un ejemplo de este codigo funcionando en Heroku:
+
+https://guarded-bayou-75397.herokuapp.com/
 
 ..................................................................................
 
