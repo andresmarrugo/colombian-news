@@ -7,8 +7,8 @@ const axios = require('axios')
 function App() {
   const [url, setUrl] = useState(`https://newsapi.org/v2/top-headlines?country=co&apiKey=6d2f58f1e8e04a7290b143496c77f016`)
   const [data, setData]=useState([])
-  const [query, setQuery]=useState('Last News')
-  console.log(process.env.API_KEY)
+  const [query, setQuery]=useState('The last news')
+
   let search=()=>{
     axios.get(url).then((res)=>{
       setData(res.data.articles)

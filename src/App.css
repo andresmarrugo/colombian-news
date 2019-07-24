@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: black;
-  height: 150px;
+  height: 100px;
   filter: drop-shadow(0px 6px 10px rgba(79, 22, 170, .7));
 }
 
@@ -92,7 +92,7 @@ footer span{
   #info{
       margin-top: 0px;
       font-size: 14pt;
-      padding-top: 200px;
+      padding-top: 110px;
       color: antiquewhite;
   }
   .header{
@@ -101,6 +101,15 @@ footer span{
     position: fixed;
     padding-top: 0;
     flex-direction: column;
+  }
+  .title{
+    height: 60%;
+    font-size: 18pt;
+    
+  }
+  .title h1{
+    padding: 0;
+    margin: 0;
   }
 
 }
