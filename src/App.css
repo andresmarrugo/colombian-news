@@ -23,11 +23,12 @@
 }
 
 .title{
-  font-family: 'Roboto', 'Arial Narrow';
+  font-family: 'Old English Text MT', 'Roboto';
   padding-left: 5%;
   color: whitesmoke;
   font-size: 20pt;
-  text-shadow: -2px 3px 5px white;
+  letter-spacing: 5pt;
+  text-shadow: -1px 1px 5px rgba(255,255,255,.8);
 }
 #info{
   font-family: 'Courier New', Courier, monospace

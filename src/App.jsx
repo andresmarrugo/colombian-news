@@ -1,14 +1,14 @@
 import React,{useState, useEffect} from 'react';
 import Article from './components/article'
 import './App.css';
-require('dotenv').config()
+const createHash = require('hash-generator');
 const axios = require('axios')
 
 function App() {
-  const [url, setUrl] = useState(`https://newsapi.org/v2/top-headlines?country=co&apiKey=${process.env.REACT_APP_API_KEY}`)
+  const [url, setUrl] = useState(`https://newsapi.org/v2/top-headlines?country=co&apiKey=${process.env.API_KEY}`)
   const [data, setData]=useState([])
   const [query, setQuery]=useState('Last News')
-  console.log(process.env)
+  console.log(process.env.API_KEY)
   let search=()=>{
     axios.get(url).then((res)=>{
       setData(res.data.articles)
@@ -47,7 +47,7 @@ function App() {
       
       today = yyyy + '-' + mm + '-' + dd; // fecha pal' query
       
-      let urlQuery = `https://newsapi.org/v2/everything?q=${query}&from=${today}&sortBy=popularity&apiKey=${process.env.REACT_APP_API_KEY}`
+      let urlQuery = `https://newsapi.org/v2/everything?q=${query}&from=${today}&sortBy=popularity&apiKey=${process.env.API_KEY}`
       document.querySelector('#info').innerHTML=`results for: <i>"${query}"</i>`
       document.querySelector('#searchBar').value=''
       setUrl(urlQuery)
@@ -60,7 +60,7 @@ function App() {
         <div id="container">
           {
             data.map(itm =>(
-              <Article data={itm}/>
+              <Article key={createHash(4)} data={itm}/>
             ))
           }
         </div>
